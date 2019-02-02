@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>barre de progresssion</title>
+  <style>
+     #zak1{
+
+     height: 50px;
+     width: 100%;
+     background-color: #ddd;
+     margin-top:50px;
+     position: relative;
+     }
+      #zak2{
+
+     height: 50px;
+     width: 2%;
+     background-color: #2FCC83;
+     margin-top:50px;
+     position: relative;
+     }
+
+  </style>
+</head>
+
+<body>
+    <button type="button" onclick="tester()">Tester</button>
+
+<div id="zak1">
+    <div id="zak2">
+
+    </div>
+</div>
+<script>
+function tester(){
+   var x=document.getElementById("zak2");
+   var width=0;
+   var y=setInterval(frame,5);
+     function frame(){
+         if(width == 100) {
+              clearInterval(y);
+         }
+         else{
+             width++;
+             x.style.width= width+ '%';
+         }
+     }
+
+
+
+}
+</script>
+
+</body>
+</html>
